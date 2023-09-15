@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Omri's Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #666;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Omri's Profile</h1>
+        <img src="your-profile-image.jpg" alt="Omri's Profile Image" width="200">
+        <p>Hi, my name is Omri Yankelevits!</p>
+        <h2>My Favorite Links:</h2>
+        <ul>
+            <li><a href="{{ pair.url }}">{{ pair.text }}</a></li>
+            <!-- Add more favorite links here -->
+        </ul>
+
+        <h2>Add New Link:</h2>
+        <form method="POST">
+            <label for="text">Text:</label>
+            <input type="text" name="text" required>
+            <br>
+            <label for="url">URL:</label>
+            <input type="text" name="url" required>
+            <br>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+</body>
+</html>
