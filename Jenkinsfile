@@ -1,5 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        kubernetes {
+            label 'promo-app'
+            yamlFile 'build-pod.yaml'
+            defaultContainer 'surfapp-docker-helm-build'
+        }
+    }
 
     environment {
         // Define your Docker Hub credentials ID (configured in Jenkins)
