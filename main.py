@@ -8,10 +8,11 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # Connect to your MongoDB instance
-client = MongoClient('mongodb://mongo:27017/')
-client = MongoClient("mongo", 27017, username="root", password="password", authSource="admin")
-db = client['project']
-collection = db['urls']
+username="root"
+password="3yGWpZ7jeS"
+client = MongoClient(f'mongodb://{username}:{password}@34.78.116.136:27017/')
+db = client['omri_pro']
+collection = db['omri_url']
 
 #backend - connection to db 
 @app.route('/', methods=['GET', 'POST'])
